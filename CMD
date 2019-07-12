@@ -1,0 +1,21 @@
+wget https://dl.google.com/go/go1.11.2.freebsd-amd64.tar.gz
+
+tar zxxvf go1.11.2.freebsd-amd64.tar.gz
+
+export PATH=$PATH:$HOME/go/bin
+export GOPATH=$HOME/src/go
+
+mkdir src/go/src/github.com/influxdata
+
+cd src/go/src/github.com/influxdata
+
+git clone https://github.com/influxdata/chronograf.git
+
+sudo ln -s /usr/local/bin/python2.7 /usr/local/bin/python
+
+cd chronograf
+
+gmake
+
+
+
